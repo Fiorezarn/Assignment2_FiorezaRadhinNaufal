@@ -4,7 +4,7 @@ Web Landing Page Traditional Game with a modern touch using Tailwind CSS. This w
 
 ## Demo Website
 
-![alt text](https://github.com/Fiorezarn/Assignment2_FiorezaRadhinNaufal/blob/main/Assets/image/demogif.gif)
+![alt text](https://github.com/Fiorezarn/Assignment2_FiorezaRadhinNaufal/blob/main/assets/image/demogif.gif)
 
 ## Live Demo
 
