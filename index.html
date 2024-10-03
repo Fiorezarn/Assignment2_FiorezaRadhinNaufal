@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Traditional Game Landing Page" />
+    <meta name="author" content="Fioreza R N" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <title>Traditional Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <header
+      class="bg-[url('./assets/image/main-bg.jpg')] relative h-screen bg-cover bg-center"
+    >
+      <!-- Navbar -->
+      <nav
+        class="flex justify-between lg:grid lg:grid-cols-2 p-6 absolute top-0 w-full bg-black bg-opacity-50"
+      >
+        <!-- Logo -->
+        <div class="flex justify-between">
+          <h1
+            class="text-white mx-auto text-2xl font-bold font-opensans tracking-[2px]"
+          >
+            LOGO
+          </h1>
+          <ul
+            class="hidden lg:flex text-white gap-12 items-center font-opensans text-xs font-bold"
+          >
+            <li><a href="#home" class="hover:text-gray-400">HOME</a></li>
+            <li><a href="#work" class="hover:text-gray-400">WORK</a></li>
+            <li><a href="#contact" class="hover:text-gray-400">CONTACT</a></li>
+            <li><a href="#about" class="hover:text-gray-400">ABOUT ME</a></li>
+          </ul>
+        </div>
+
+        <!-- Auth Links (Desktop) -->
+        <ul
+          class="hidden lg:flex w-[85%] text-white gap-12 items-center justify-end font-opensans text-xs font-bold"
+        >
+          <li><a href="#signup" class="hover:text-gray-400">SIGN UP</a></li>
+          <li><a href="#login" class="hover:text-gray-400">LOGIN</a></li>
+        </ul>
+        <div class="lg:hidden flex gap-6 items-center">
+          <button onclick="toggleProfile()">
+            <img
+              src="./assets/image/jada.jpg"
+              alt="Jada Griffin"
+              class="w-10 h-10 rounded-full"
+            />
+          </button>
+          <!-- Mobile Menu Button -->
+          <button
+            onclick="toggleMenu()"
+            id="hamburger"
+            class="text-white rounded-md lg:hidden"
+          >
+            <i
+              id="icon-menu"
+              class="fa-solid fa-bars text-2xl transition-transform duration-300 ease-in-out"
+            ></i>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          class="bg-black bg-opacity-50 lg:hidden fixed z-10 right-0 top-[90px] w-1/2 ease-in-out duration-500 hidden rounded-xl"
+          id="menu"
+        >
+          <ul class="flex flex-col space-y-2 p-4 font-abel font-bold">
+            <li class="text-center">
+              <a
+                href="#home"
+                class="p-4 block hover:bg-black hover:bg-opacity-70 text-white rounded-xl"
+                >Home</a
+              >
+            </li>
+            <li class="text-center">
+              <a
+                href="#work"
+                class="p-4 block hover:bg-black hover:bg-opacity-70 text-white rounded-xl"
+                >Work</a
+              >
+            </li>
+            <li class="text-center">
+              <a
+                href="#contact"
+                class="p-4 block hover:bg-black hover:bg-opacity-70 text-white rounded-xl"
+                >Contact</a
+              >
+            </li>
+            <li class="text-center">
+              <a
+                href="#about"
+                class="p-4 block hover:bg-black hover:bg-opacity-70 text-white rounded-xl"
+                >About Me</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div
+          id="profile"
+          class="bg-black bg-opacity-50 lg:hidden fixed z-10 right-20 top-[90px] w-1/2 ease-in-out duration-500 hidden rounded-xl"
+        >
+          <ul class="font-abel font-bold">
+            <li class="text-center">
+              <a
+                href="#signup"
+                class="p-4 block hover:bg-black hover:bg-opacity-70 text-white rounded-xl"
+                >Sign Up</a
+              >
+            </li>
+            <li class="text-center">
+              <a
+                href="#login"
+                class="p-4 block hover:bg-black hover:bg-opacity-70 text-white rounded-xl"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <div
+        class="flex flex-col items-center justify-center text-center h-full text-white"
+      >
+        <h1 class="lg:text-7xl text-3xl mb-4 font-abel tracking-[3px]">
+          PLAY TRADITIONAL GAME
+        </h1>
+        <p class="lg:text-2xl mb-6 font-abel tracking-[2px]">
+          Experience new traditional game play
+        </p>
+        <a
+          href="#"
+          class="bg-yellow text-black px-24 py-3 rounded-sm hover:bg-yellowhover transition font-bold font-opensans"
+        >
+          PLAY NOW
+        </a>
+        <div
+          class="absolute flex flex-col items-center bottom-10 animate-bounce"
+        >
+          <a href="" class="font-xs font-opensans font-bold">THE STORY</a>
+          <img
+            class="w-7"
+            src="./assets/image/scroll-down.svg"
+            alt="scroll-down"
+          />
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section
+        class="bg-[url('./assets/image/the-games-bg.jpg')] relative lg:flex lg:flex-row lg:h-screen py-8 px-2 bg-cover bg-center justify-center items-center"
+      >
+        <!-- Teks bagian kiri -->
+        <div
+          class="gap-2 lg:text-left items-center text-center lg:text-left lg:items-start text-white h-[60%]"
+        >
+          <p class="tracking-widest text-xl">What's so Special?</p>
+          <h1 class="text-5xl tracking-widest">THE GAMES</h1>
+        </div>
+
+        <!-- Bagian Carousel Gambar -->
+        <div
+          class="flex justify-center items-center w-full mt-24 lg:h-[500px] lg:w-[800px] lg:relative gap-4 lg:ml-[90px]"
+        >
+          <!-- Tombol kiri -->
+          <button class="text-white text-2xl" onclick="plusSlides(-1)">
+            <img
+              class="w-5"
+              src="./assets/image/switch-left.svg"
+              alt="switch-left"
+            />
+          </button>
+
+          <!-- Gambar carousel -->
+          <div class="relative" id="slideContainer">
+            <!-- Tombol navigasi (dot) -->
+            <div
+              class="flex justify-center gap-4 lg:gap-12 absolute bottom-[2rem] left-[50%] transform -translate-x-1/2 mt-4"
+              id="dot-group"
+            ></div>
+          </div>
+
+          <!-- Tombol kanan -->
+          <button class="text-white text-2xl" onclick="plusSlides(1)">
+            <img
+              class="w-5"
+              src="./assets/image/switch-right.svg"
+              alt="switch-right"
+            />
+          </button>
+        </div>
+      </section>
+
+      <section
+        class="relative bg-[url('./assets/image/people.webp')] bg-cover bg-center bg-no-repeat h-screen lg:flex lg:justify-end flex justify-center items-center"
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+        ></div>
+        <div
+          class="relative flex items-center w-[50%] lg:w-[44%] h-full font-abel tracking-[0.2rem]"
+        >
+          <div class="flex justify-start">
+            <div class="max-w-lg">
+              <h2 class="text-white text-[24px] mb-2 font-[400]">
+                What's so special?
+              </h2>
+              <h1
+                class="text-white text-6xl font-normal font-abel tracking-[3px] mb-20"
+              >
+                FEATURES
+              </h1>
+              <ul class="relative w-full list-none p-0">
+                <li class="relative flex items-start mb-8">
+                  <span
+                    class="w-[23px] h-[23px] border-2 border-white rounded-full bg-white absolute left-[2%] -translate-x-1/2 z-10"
+                  ></span>
+                  <div class="ml-[40px] text-left w-full">
+                    <h4 class="m-0 text-2xl text-yellow">TRADITIONAL GAMES</h4>
+                    <p
+                      class="text-lg text-white text-justify font-opensans leading-[22px] mt-2"
+                    >
+                      If you miss your childhood, we provide many traditional
+                      games here.
+                    </p>
+                  </div>
+                  <div
+                    class="absolute left-[2%] -translate-x-1/2 top-[20px] w-[2px] h-full lg:h-[100px] bg-white z-0"
+                  ></div>
+                  <!-- Garis vertikal untuk item 1 -->
+                </li>
+                <li class="relative flex items-start mb-8">
+                  <span
+                    class="w-[23px] h-[23px] border-2 border-white rounded-full bg-[#1a1a1a] absolute left-[2%] -translate-x-1/2 z-10"
+                  ></span>
+                  <div class="ml-[40px] text-left w-full lg:w-[70%]">
+                    <h4 class="m-0 text-[20px] text-yellow leading-[1.2]">
+                      GAME SUIT
+                    </h4>
+                  </div>
+                </li>
+                <li class="relative flex items-start mb-8">
+                  <span
+                    class="w-[23px] h-[23px] border-2 border-white rounded-full bg-[#1a1a1a] absolute left-[2%] -translate-x-1/2 z-10"
+                  ></span>
+                  <div class="ml-[40px] text-left w-full lg:w-[70%]">
+                    <h4 class="m-0 text-[20px] text-yellow leading-[1.2]">
+                      TBD
+                    </h4>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="bg-[url('./assets/image/requirements.png')] bg-cover bg-center bg-no-repeat min-h-screen text-white flex flex-col lg:py-12"
+      >
+        <div class="flex items-center justify-center pt-8">
+          <p class="text-center text-sm lg:text-base font-abel">
+            Can My Computer Run this game?
+          </p>
+        </div>
+
+        <div class="flex items-center justify-center p-4 lg:p-24">
+          <div class="w-full">
+            <div
+              class="lg:w-[50%] flex flex-col justify-center items-center lg:justify-start"
+            >
+              <h1
+                class="text-3xl lg:text-[56px] font-normal tracking-[3px] mb-12 lg:mb-20 font-abel"
+              >
+                SYSTEM REQUIREMENTS
+              </h1>
+              <div class="grid grid-cols-2 grid-rows-3 mx-auto lg:w-[573px]">
+                <div class="border border-gray-600 p-4">
+                  <h1 class="text-2xl font-abel text-yellow">OS:</h1>
+                  <p class="text-white font-opensans">
+                    Windows 7 64-bit only (No OSX support at this time)
+                  </p>
+                </div>
+                <div class="border border-gray-600 p-4">
+                  <h1 class="text-2xl font-abel text-yellow">PROCESSOR:</h1>
+                  <p class="text-white font-opensans">
+                    Intel Core 2 Duo @ 2.4 GHZ or AMD Athlon X2 @ 2.8 GHZ
+                  </p>
+                </div>
+                <div class="border border-gray-600 p-4">
+                  <h1 class="text-2xl font-abel text-yellow">MEMORY:</h1>
+                  <p class="text-white font-opensans">4 GB RAM</p>
+                </div>
+                <div class="border border-gray-600 p-4">
+                  <h1 class="text-2xl font-abel text-yellow">STORAGE:</h1>
+                  <p class="text-white font-opensans">8 GB available space</p>
+                </div>
+                <div class="col-span-2 border border-gray-600 p-4">
+                  <h1 class="text-2xl font-abel text-yellow">GRAPHICS:</h1>
+                  <p class="text-white font-opensans">
+                    NVIDIA GeForce GTX 660 2GB or AMD Radeon HD 7850 2GB
+                    DirectX11 (Shader Model 5)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="bg-[url('./assets/image/score-bg.webp')] relative lg:h-screen bg-cover bg-center lg:grid lg:grid-cols-2 py-10"
+      >
+        <div
+          class="flex flex-col gap-4 justify-center items-center lg:items-start lg:ml-24 px-4 lg:px-0"
+        >
+          <h1 class="text-5xl tracking-widest text-center text-white font-abel">
+            TOP SCORES
+          </h1>
+          <p
+            class="tracking-widest text-white text-center lg:text-left font-abel w-[80%] lg:w-[50%]"
+          >
+            This top score from various games provided on this platform
+          </p>
+          <a
+            href="#"
+            class="bg-yellow text-black p-2 w-[260px] h-[60px] text-ofont-opensans items-center flex justify-center rounded-md hover:bg-yellowhover transition font-bold"
+          >
+            see more
+          </a>
+        </div>
+
+        <div class="p-10 flex flex-col gap-6">
+          <!-- Testimonial 1 -->
+          <div
+            class="lg:w-[452px] bg-darkgray text-white rounded-md p-4 shadow-lg relative lg:ml-auto"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-11 rounded-full bg-yellow">
+                  <img
+                    src="./assets/image/evan.jpg"
+                    alt="Evan Lahti"
+                    class="w-10 h-10 rounded-full"
+                  />
+                </span>
+                <div>
+                  <h3
+                    class="font-normal text-yellow font-abel tracking-[2px] text-2xl"
+                  >
+                    Evan Lahti
+                  </h3>
+                  <p class="text-lg font-opensans mt-[-6px] text-gray-400">
+                    PC Gamer
+                  </p>
+                </div>
+              </div>
+              <div class="mb-10">
+                <i class="text-gray-400 fa-brands fa-twitter"></i>
+              </div>
+            </div>
+            <p class="mt-2 text-lg font-opensans">
+              "One of my gaming highlights of the year."
+            </p>
+            <p class="text-sm text-gray-400 mt-1 font-opensans">
+              June 18, 2021
+            </p>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            class="lg:w-[452px] bg-darkgray text-white rounded-md p-4 shadow-lg relative"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-11 rounded-full bg-yellow">
+                  <img
+                    src="./assets/image/jada.jpg"
+                    alt="Jada Griffin"
+                    class="w-10 h-10 rounded-full"
+                  />
+                </span>
+                <div>
+                  <h3
+                    class="font-normal text-yellow font-abel tracking-[2px] text-2xl"
+                  >
+                    Jada Griffin
+                  </h3>
+                  <p class="text-lg font-opensans text-gray-400 mt-[-6px]">
+                    Nerdreactor
+                  </p>
+                </div>
+              </div>
+              <div class="mb-10">
+                <i class="text-gray-400 fa-brands fa-twitter"></i>
+              </div>
+            </div>
+            <p class="mt-2 text-lg font-opensans">
+              "The next big thing in the world of streaming and survival games."
+            </p>
+            <p class="text-sm text-gray-400 mt-1 font-opensans">
+              July 10, 2021
+            </p>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div
+            class="lg:w-[452px] bg-darkgray text-white rounded-md p-4 shadow-lg relative lg:ml-auto"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-11 rounded-full bg-yellow">
+                  <img
+                    src="./assets/image/aron.jpg"
+                    alt="Aaron Williams"
+                    class="w-10 h-10 rounded-full"
+                  />
+                </span>
+                <div>
+                  <h3
+                    class="font-normal text-yellow font-abel tracking-[2px] text-2xl"
+                  >
+                    Aaron Williams
+                  </h3>
+                  <p class="text-lg font-opensans text-gray-400 mt-[-6px]">
+                    Uproxx
+                  </p>
+                </div>
+              </div>
+              <div class="mb-10">
+                <i class="text-gray-400 fa-brands fa-twitter"></i>
+              </div>
+            </div>
+            <p class="mt-2 text-lg font-opensans">
+              "Snoop Dogg Playing The Wildly Entertaining 'SOS' Is Ridiculous."
+            </p>
+            <p class="text-sm text-gray-400 mt-1 font-opensans">
+              December 24, 2018
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="lg:bg-[url('./assets/image/newsletter.png')] bg-black lg:bg-cover lg:bg-center lg:bg-no-repeat lg:h-screen p-8 text-white flex justify-center items-center lg:flex-col lg:justify-start"
+      >
+        <div
+          class="w-full lg:mt-24 flex flex-col justify-center items-center lg:justify-end lg:items-end"
+        >
+          <div
+            class="lg:w-[60%] space-y-8 flex flex-col justify-center items-center lg:items-start"
+          >
+            <p class="font-abel text-2xl font-normal tracking-[2px]">
+              Want to stay in touch?
+            </p>
+            <img
+              class="w-1/2 lg:hidden"
+              src="./assets/image/newsletter-icon.png"
+              alt=""
+            />
+            <h1
+              class="text-4xl lg:text-6xl font-abel font-normal tracking-[3px]"
+            >
+              NEWSLETTER <br />
+              SUBSCRIBE
+            </h1>
+            <p
+              class="font-opensans font-normal lg:text-left text-center text-base lg:w-[600px] mb-10"
+            >
+              In order to start receiving our news, all you have to do is enter
+              your email address. Everything else will be taken care of by us.
+              We will send you emails containing information about game. We
+              don't spam.
+            </p>
+            <div class="flex gap-2">
+              <!-- Input Email -->
+              <div class="relative">
+                <input
+                  type="text"
+                  id="input"
+                  value="youremail@binar.co,id"
+                  class="lg:w-[366px] w-full lg:h-[60px] rounded-md bg-gray-900 text-yellow py-4 px-2 lg:py-3 lg:px-4 peer"
+                  placeholder=" "
+                />
+                <label
+                  for="input"
+                  class="absolute font-opensans text-gray-400 left-2 lg:left-4 top-3 transform -translate-y-1/2 cursor-text text-xs transition-all duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:left-4 peer-focus:top-0 peer-focus:text-xs peer-focus:text-yellow"
+                >
+                  Your Email Address
+                </label>
+              </div>
+
+              <!-- Button Subscribe -->
+              <button
+                class="bg-yellow hover:bg-yellowhover font-bold text-black text-sm lg:text-base p-2 lg:px-4 lg:py-3 rounded lg:w-[230px] md:w-[200px]"
+              >
+                SUBSCRIBE NOW
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#090707] text-white py-6">
+      <div class="mx-auto flex flex-col items-center">
+        <div
+          class="flex flex-col lg:flex-row justify-between lg:justify-end gap-6 w-full max-w-6xl px-4 mb-6"
+        >
+          <div
+            class="flex flex-wrap justify-center gap-4 lg:gap-6 font-bold text-xs font-opensans tracking-[2px]"
+          >
+            <a href="#" class="hover:text-gray-400 transition">MAIN</a>
+            <a href="#" class="hover:text-gray-400 transition">ABOUT</a>
+            <a href="#" class="hover:text-gray-400 transition">GAME FEATURES</a>
+            <a href="#" class="hover:text-gray-400 transition"
+              >SYSTEM REQUIREMENTS</a
+            >
+            <a href="#" class="hover:text-gray-400 transition">QUOTES</a>
+          </div>
+          <div class="flex gap-4 justify-center">
+            <a
+              href="#"
+              aria-label="Facebook"
+              class="hover:text-blue-600 transition"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a
+              href="#"
+              aria-label="Twitter"
+              class="hover:text-blue-600 transition"
+            >
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a
+              href="#"
+              aria-label="YouTube"
+              class="hover:text-red-600 transition"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a
+              href="#"
+              aria-label="Twitch"
+              class="hover:text-purple-600 transition"
+            >
+              <i class="fa-brands fa-twitch"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Divider line -->
+        <hr class="border-gray-600 border-t-[1px] w-full max-w-6xl mb-4" />
+
+        <!-- Copyright and policy section -->
+        <div
+          class="flex flex-col lg:flex-row justify-between w-full max-w-6xl px-4 mt-2 text-center lg:text-left"
+        >
+          <p class="text-sm font-opensans mb-2 lg:mb-0">
+            © 2018 Your Games, Inc. All Rights Reserved
+          </p>
+          <div class="text-xs font-bold font-opensans space-x-2">
+            <a href="#" class="hover:underline">PRIVACY POLICY</a>
+            <span>|</span>
+            <a href="#" class="hover:underline">TERMS OF SERVICES</a>
+            <span>|</span>
+            <a href="#" class="hover:underline">CODE OF CONDUCT</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/tailwind.config.js"></script>
+  </body>
+</html>
